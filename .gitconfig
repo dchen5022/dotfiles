@@ -1,0 +1,18 @@
+[user]
+	name = dchen5022
+	email = dennischen5022@gmail.com
+[push]
+	autoSetupRemote = true
+	rebase = true
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
+[maintenance]
+	repo = /Users/dennischen/dev/LRL/test-stand-sw
+	repo = /Users/dennischen/git/centos-stream-9
+	repo = /Users/dennischen/git/centos-stream-10
