@@ -144,5 +144,4 @@ export PATH="$PATH:$HOME/dev/LRL/test-stand-sw/test-compiler/target/debug/lrl_te
 export JAVA_HOME=$(/usr/libexec/java_home -v 21.0.5)
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export AVNST_CTS_ROOT_FOLDER="$HOME/dev/AvanSight"
-export TMPDIR="/var/tmp/podman"
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
