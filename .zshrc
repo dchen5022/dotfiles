@@ -135,12 +135,4 @@ sadssh() {
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
-export PATH="/Users/dennnischen/Documents/dev/rust/rustlings/target/debug:$PATH"
-export PATH="$HOME/dev/LRL/test-stand-sw/test-compiler/target/debug:$PATH"
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export PATH="$PATH:$HOME/dev/LRL/test-stand-sw/test-compiler/target/debug/lrl_test_compiler"
-export JAVA_HOME=$(/usr/libexec/java_home -v 21.0.5)
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export AVNST_CTS_ROOT_FOLDER="$HOME/dev/AvanSight"
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
