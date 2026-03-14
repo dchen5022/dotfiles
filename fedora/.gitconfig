@@ -1,0 +1,38 @@
+[user]
+  name = Dennis Chen
+  email = dennischen5022@gmail.com
+[push]
+	autoSetupRemote = true
+	rebase = true
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
+  eol = lf
+  pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
+[merge]
+  conflictStyle = zdiff3
+
+[alias]
+  slog = log --oneline
+  fpush = push --force-with-lease
+  rba = rebase --abort
+  rbc = rebase --continue
+  fix = commit -a --amend --no-edit
+
+[includeIf "gitdir:~/School/"]
+  path = ~/.gitconfig-school
+[maintenance]
+	repo = /home/dchen/School/seniordes/2026Spring-Team03-CSC
