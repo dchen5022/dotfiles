@@ -1,6 +1,6 @@
 [user]
-  name = Dennis Chen
-  email = dennischen5022@gmail.com
+    name = Dennis Chen
+    email = dechen@redhat.com
 [push]
 	autoSetupRemote = true
 	rebase = true
@@ -8,8 +8,8 @@
 	defaultBranch = main
 [core]
 	autocrlf = input
-  eol = lf
-  pager = delta
+    eol = lf
+	pager = delta
 
 [interactive]
     diffFilter = delta --color-only
@@ -24,17 +24,48 @@
 [rerere]
 	enabled = true
 [merge]
-  conflictStyle = zdiff3
+    conflictStyle = zdiff3
 
 [alias]
-  slog = log --oneline
-  fpush = push --force-with-lease
-  rba = rebase --abort
-  rbc = rebase --continue
-  fix = commit -a --amend --no-edit
+    slog = log --oneline
+    fpush = push --force-with-lease
+    rba = rebase --abort
+    rbc = rebase --continue
+    fix = commit -a --amend --no-edit
+	summary = show -s --format=%s
+	date = show -s --format=%cd
+	tag-date = tag -l --format='%(creatordate:iso)'
+	rlog = log --oneline --reverse --no-merges --no-abbrev-commit --no-decorate --follow
+	amc = am --continue
+	ama = am --abort
+
+[sendemail]
+    chainreplyto = true
+    smtpserver = smtp.corp.redhat.com
+    confirm=auto
+	suppresscc = body
 
 [includeIf "gitdir:~/School/"]
-  path = ~/.gitconfig-school
+    path = ~/.gitconfig-school
+
+[includeIf "gitdir:~/LRL/"]
+    path = ~/.gitconfig-lrl
+
+[includeIf "gitdir:~/redhat/"]
+    path = ~/.redhat.gitconfig
+
+
 [maintenance]
 	repo = /home/dchen/School/seniordes/2026Spring-Team03-CSC
 	repo = /home/dchen/LRL/test-stand-sw
+	repo = /home/dechen/redhat/kernels/centos-stream-9
+	repo = /home/dechen/redhat/kernels/centos-stream-10
+	repo = /home/dechen/redhat/kernels/linux
+	repo = /home/dechen/redhat/kernels/rhel-10
+	repo = /home/dechen/redhat/kernels/rhel-8
+	repo = /home/dechen/redhat/kernels/rhel-9
+	repo = /home/dechen/redhat/kernels/kernel-ark
+	repo = /home/dechen/redhat/platform-test
+[gpg "ssh"]
+	allowedSignersFile = /home/dechen/.ssh/allowed_signers
+
